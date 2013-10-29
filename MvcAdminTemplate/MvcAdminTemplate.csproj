@@ -1237,7 +1237,6 @@
     <Content Include="Scripts\js\respond.min.js" />
     <Content Include="Scripts\js\twitter-bootstrap-hover-dropdown.js" />
     <Content Include="Scripts\js\twitter-bootstrap-hover-dropdown.min.js" />
-    <Content Include="default.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="img\glyphicons-halflings-white.png" />
