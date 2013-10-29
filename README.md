@@ -1,8 +1,5 @@
-MVC-Bootstrap-3-Admin-Template
+MVC Bootstrap 3.x Admin Sample project
 ==============================
-
-
-# MVC Bootstrap 3.x Admin Sample project
 
 Details:
 
