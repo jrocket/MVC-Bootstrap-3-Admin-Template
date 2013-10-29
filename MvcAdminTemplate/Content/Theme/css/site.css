@@ -1,0 +1,89 @@
+﻿.main-title h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.main-title a {
+    float: right;
+}
+
+.bs-docs-home {
+}
+
+.bs-masthead {
+    padding: 0;
+}
+
+    .bs-masthead h1 {
+        font-size: 40px;
+        margin: 0;
+        padding: 34px 0;
+        text-align: center;
+    }
+
+    .bs-masthead a:hover {
+        text-decoration: none;
+    }
+
+.meritoo-logo a {
+    background-color: #fff;
+    border: 1px solid rgba(66, 139, 202, 0.4);
+    display: block;
+    padding: 12px 0;
+}
+
+    .meritoo-logo a img {
+        display: block;
+        margin: 0 auto;
+    }
+
+.row-urls {
+    margin-top: 4px;
+}
+
+    .row-urls .col-md-6 {
+        text-align: center;
+    }
+
+        .row-urls .col-md-6 a {
+            font-size: 18px;
+        }
+
+
+.buttons-title {
+    margin-top: 20px;
+}
+
+.buttons-group {
+    margin-top: 10px;
+}
+
+.the-icons {
+    margin-left: 0;
+    list-style: none;
+}
+
+    .the-icons li {
+        float: left;
+        width: 25%;
+        line-height: 25px;
+    }
+
+
+
+.pagination-container {
+    margin-top: 20px;
+}
+
+.pagination-container-first {
+    margin-top: 10px;
+}
+
+.pagination-container .pagination {
+    margin: 0;
+}
+
+.notification {
+    margin: 5px 0;
+}
