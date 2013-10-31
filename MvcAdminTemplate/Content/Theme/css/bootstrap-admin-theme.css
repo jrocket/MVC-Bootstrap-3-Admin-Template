@@ -34,15 +34,48 @@ body{
     background-color: rgba(245, 245, 245, 0.5);
     padding-top: 70px; /* Required, because main menu / navbar has "navbar-fixed-top" class and is sticked to the top */
 }
+body.bootstrap-admin-with-small-navbar{
+    padding-top: 95px;
+}
 
 /** Main container **/
 #content {
     margin-left: 0px;
 }
 
+/** Forms */
+.form-group label.control-label{
+    line-height: normal;
+}
+.form-group label{
+    line-height: 25px;
+}
+
 /** Title of container for lists, some content etc. **/
 .bootstrap-admin-box-title{
     display: inline;
+}
+
+/** Title of the content */
+.bootstrap-admin-content-title h1{
+    display: inline-block;
+    margin-top: 0;
+}
+.bootstrap-admin-content-title .action{
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.bootstrap-admin-content-title .action:first-of-type{
+    margin-right: 0;
+}
+.bootstrap-admin-content-title .action.btn{
+    padding-left: 0;
+    padding-right: 0;
+}
+.bootstrap-admin-content-title .action.btn:active{
+    box-shadow: none;
 }
 
 /** Content of the panel **/
@@ -63,6 +96,26 @@ body{
 /** Left, the first, column **/
 .bootstrap-admin-col-left{
     padding-left: 0;
+}
+
+/** Horizontal navbars */
+.bootstrap-admin-navbar-sm{
+    background-image: none;
+    border: 0;
+    box-shadow: initial;
+    /*margin-bottom: 0;*/
+    min-height: initial;
+    z-index: 1040;
+}
+.bootstrap-admin-navbar-sm  .navbar-nav:first-child{
+    margin-left: -15px;
+}
+.bootstrap-admin-navbar-sm  .navbar-nav li a{
+    font-size: 13px;
+    /*padding: 3px 8px;*/
+}
+.bootstrap-admin-navbar-under-small{
+    /*top: 25px;*/
 }
 
 /** Side Bar **/
@@ -192,7 +245,7 @@ footer p{
 .bootstrap-admin-login-form{
     max-width: 400px;
     padding: 30px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     background-color: #FFF;
     border: 1px solid #E5E5E5;
     -webkit-border-radius: 5px;

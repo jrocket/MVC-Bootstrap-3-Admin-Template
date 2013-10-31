@@ -1,11 +1,7 @@
-﻿.main-title h1 {
+﻿
+.bootstrap-admin-content-title h1 {
     font-size: 45px;
     margin-bottom: 30px;
-    margin-top: 0;
-}
-
-.main-title a {
-    float: right;
 }
 
 .bs-docs-home {
@@ -49,6 +45,8 @@
         .row-urls .col-md-6 a {
             font-size: 18px;
         }
+
+
 
 
 .buttons-title {

@@ -8,7 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body class="bootstrap-admin-with-small-navbar">
+   
+    <!-- main / large navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="row">
@@ -39,8 +41,22 @@
                             </ul>
                         </li>
                     </ul>
-                    @Html.Partial("_LoginPartial")
-
+                    <div class="collapse navbar-collapse bootstrap-admin-navbar-sm">
+                        <ul class="nav navbar-nav navbar-right ">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li>
+                                <a href="#">Reminders <i class="glyphicon glyphicon-bell"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Settings <i class="glyphicon glyphicon-cog"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Go to frontend <i class="glyphicon glyphicon-share-alt"></i></a>
+                            </li>
+                            @Html.Partial("_LoginPartial")
+                        </ul>
+                    </div>
                 </div><!-- /.navbar-collapse -->
             </div>
         </div><!-- /.container -->
