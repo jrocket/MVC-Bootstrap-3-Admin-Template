@@ -40,9 +40,13 @@ namespace MvcAdminTemplate
     , "~/Content/Theme/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/core-b3.js"
     , "~/Content/Theme/vendors/jGrowl/jquery.jgrowl.js"
     , "~/Content/Theme/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"
-
+    , "~/Content/Theme/vendors/sparkline/jquery.sparkline.js"
+     , "~/Content/Theme/vendors/tablesorter/js/jquery.tablesorter.min.js"
+      , "~/Content/Theme/vendors/flot/jquery.flot.js"
+       , "~/Content/Theme/vendors/flot/jquery.flot.selection.js"
+        , "~/Content/Theme/vendors/flot/jquery.flot.resize.js"
+         , "~/Content/Theme/vendors/fullcalendar/fullcalendar.js"
                    ));
-
 
 
 
@@ -64,6 +68,7 @@ namespace MvcAdminTemplate
    , "~/Content/Theme/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/stylesheets/bootstrap-wysihtml5/core-b3.css"
    , "~/Content/Theme/vendors/jGrowl/jquery.jgrowl.css"
    , "~/Content/Theme/vendors/bootstrap-datepicker/css/datepicker.css"
+    , "~/Content/Theme/vendors/fullcalendar/fullcalendar.css"
 
    ));
 

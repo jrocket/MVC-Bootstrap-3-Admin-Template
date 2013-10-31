@@ -1,0 +1,396 @@
+﻿@{
+    ViewBag.Title = "Statistics";
+}
+@Html.Partial("_LeftMenu")
+@Styles.Render("~/Content/Vendors")
+<div class="col-md-10">
+
+    <div class="text-center">
+        <ul class="stats_box">
+            <li>
+                <div class="sparkline bar_week"></div>
+                <div class="stat_text">
+                    <strong>2.345</strong>Weekly Visit
+                    <span class="percent down"> <i class="fa fa-caret-down"></i> -16%</span>
+                </div>
+            </li>
+            <li>
+                <div class="sparkline line_day"></div>
+                <div class="stat_text">
+                    <strong>165</strong>Daily Visit
+                    <span class="percent up"> <i class="fa fa-caret-up"></i> +23%</span>
+                </div>
+            </li>
+            <li>
+                <div class="sparkline pie_week"></div>
+                <div class="stat_text">
+                    <strong>$2 345.00</strong>Weekly Sale
+                    <span class="percent"> 0%</span>
+                </div>
+            </li>
+            <li>
+                <div class="sparkline stacked_month"></div>
+                <div class="stat_text">
+                    <strong>$678.00</strong>Monthly Sale
+                    <span class="percent down"> <i class="fa fa-caret-down"></i> -10%</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="text-center">
+
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-star"></i>
+            <span>default</span>
+            <span class="label label-default">2</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class=" glyphicon glyphicon-stats"></i>
+            <span>danger</span>
+            <span class="label label-danger">2</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-search"></i>
+            <span>No Label</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-envelope"></i>
+            <span>success</span>
+            <span class="label label-success">-456</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-warning-sign"></i>
+            <span>warning</span>
+            <span class="label label-warning">+25</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-link"></i>
+            <span>π</span>
+            <span class="label btn-metis-2">3.14159265</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-glass"></i>
+            <span>é</span>
+            <span class="label btn-metis-4">2.71828</span>
+        </a>
+        <a class="quick-btn" href="#">
+            <i class="glyphicon glyphicon-fire"></i>
+            <span>φ</span>
+            <span class="label btn-metis-3">1.618</span>
+        </a>
+
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-8">
+                <header>
+                    <h5>Line Chart</h5>
+                </header>
+                <div class="body" id="trigo" style="height: 250px;"></div>
+        </div>
+        <div class="col-lg-4">
+            <table class="table table-condensed table-hovered sortableTable">
+                <thead>
+                    <tr>
+                        <th>Country <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+                        <th>Visit <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+                        <th>Time <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Andorra</td>
+                        <td>1126</td>
+                        <td>00:00:15</td>
+                    </tr>
+                    <tr>
+                        <td>Belarus</td>
+                        <td>350</td>
+                        <td>00:01:20</td>
+                    </tr>
+                    <tr class="error">
+                        <td>Paraguay</td>
+                        <td>43</td>
+                        <td>00:00:30</td>
+                    </tr>
+                    <tr class="info">
+                        <td>Malta</td>
+                        <td>547</td>
+                        <td>00:10:20</td>
+                    </tr>
+                    <tr>
+                        <td>Australia</td>
+                        <td>560</td>
+                        <td>00:00:10</td>
+                    </tr>
+                    <tr>
+                        <td>Kenya</td>
+                        <td>97</td>
+                        <td>00:20:00</td>
+                    </tr>
+                    <tr class="success">
+                        <td>Italy</td>
+                        <td>2450</td>
+                        <td>00:10:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <header>
+                    <h5>Calendar</h5>
+                </header>
+                <div id="calendar_content" class="body">
+                    <div id='calendar'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end .inner -->
+@section scripts
+    {
+    @Scripts.Render("~/bundles/vendors")
+
+    <script type="text/javascript">
+        $(function () { dashboard(); });
+
+        function dashboard() {
+            "use strict";
+
+            //----------- BEGIN SPARKLINE CODE -------------------------*/
+            // required jquery.sparkline.min.js*/
+
+            /** This code runs when everything has been loaded on the page */
+            /* Inline sparklines take their values from the contents of the tag */
+            $('.inlinesparkline').sparkline();
+
+            /* Sparklines can also take their values from the first argument
+             passed to the sparkline() function */
+            var myvalues = [10, 8, 5, 7, 4, 4, 1];
+            $('.dynamicsparkline').sparkline(myvalues);
+
+            /* The second argument gives options such as chart type */
+            $('.dynamicbar').sparkline(myvalues, { type: 'bar', barColor: 'green' });
+
+            /* Use 'html' instead of an array of values to pass options
+             to a sparkline with data in the tag */
+            $('.inlinebar').sparkline('html', { type: 'bar', barColor: 'red' });
+
+
+            $(".sparkline.bar_week").sparkline([5, 6, 7, 2, 0, -4, -2, 4], {
+                type: 'bar',
+                height: '40',
+                barWidth: 5,
+                barColor: '#4d6189',
+                negBarColor: '#a20051'
+            });
+
+            $(".sparkline.line_day").sparkline([5, 6, 7, 9, 9, 5, 4, 6, 6, 4, 6, 7], {
+                type: 'line',
+                height: '40',
+                drawNormalOnTop: false
+            });
+
+            $(".sparkline.pie_week").sparkline([1, 1, 2], {
+                type: 'pie',
+                width: '40',
+                height: '40'
+            });
+
+            $('.sparkline.stacked_month').sparkline(['0:2', '2:4', '4:2', '4:1'], {
+                type: 'bar',
+                height: '40',
+                barWidth: 10,
+                barColor: '#4d6189',
+                negBarColor: '#a20051'
+            });
+            //----------- END SPARKLINE CODE -------------------------*/
+
+
+            //----------- BEGIN FULLCALENDAR CODE -------------------------*/
+
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+
+            var calendar = $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,today,next,',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                selectable: true,
+                selectHelper: true,
+                select: function (start, end, allDay) {
+                    var title = prompt('Event Title:');
+                    if (title) {
+                        calendar.fullCalendar('renderEvent',
+                                {
+                                    title: title,
+                                    start: start,
+                                    end: end,
+                                    allDay: allDay
+                                },
+                        true // make the event "stick"
+                                );
+                    }
+                    calendar.fullCalendar('unselect');
+                },
+                editable: true,
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1),
+                        className: 'label label-success'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2),
+                        className: 'label label-info'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d - 3, 16, 0),
+                        allDay: false,
+                        className: 'label label-warning'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d + 4, 16, 0),
+                        allDay: false,
+                        className: 'label label-inverse'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false,
+                        className: 'label label-important'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d + 1, 19, 0),
+                        end: new Date(y, m, d + 1, 22, 30),
+                        allDay: false
+                    },
+                    {
+                        title: 'Click for Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/'
+                    }
+                ]
+            });
+            /*----------- END FULLCALENDAR CODE -------------------------*/
+
+
+
+            /*----------- BEGIN CHART CODE -------------------------*/
+            var sin = [], cos = [];
+            for (var i = 0; i < 14; i += 0.5) {
+                sin.push([i, Math.sin(i)]);
+                cos.push([i, Math.cos(i)]);
+            }
+
+            var plot = $.plot($("#trigo"),
+                    [
+                        {
+                            data: sin,
+                            label: "sin(x)",
+                            points: {
+                                fillColor: "#4572A7",
+                                size: 5
+                            },
+                            color: '#4572A7'
+                        },
+                        {
+                            data: cos,
+                            label: "cos(x)",
+                            points: {
+                                fillColor: "#333",
+                                size: 35
+                            },
+                            color: '#AA4643'
+                        }
+                    ], {
+                        series: {
+                            lines: {
+                                show: true
+                            },
+                            points: {
+                                show: true
+                            }
+                        },
+                        grid: {
+                            hoverable: true,
+                            clickable: true
+                        },
+                        yaxis: {
+                            min: -1.2,
+                            max: 1.2
+                        }
+                    });
+
+            function showTooltip(x, y, contents) {
+                $('<div id="tooltip">' + contents + '</div>').css({
+                    position: 'absolute',
+                    display: 'none',
+                    top: y + 5,
+                    left: x + 5,
+                    border: '1px solid #fdd',
+                    padding: '2px',
+                    'background-color': '#000',
+                    color: '#fff'
+                }).appendTo("body").fadeIn(200);
+            }
+
+            var previousPoint = null;
+            $("#trigo").bind("plothover", function (event, pos, item) {
+                $("#x").text(pos.x.toFixed(2));
+                $("#y").text(pos.y.toFixed(2));
+
+                if (item) {
+                    if (previousPoint !== item.dataIndex) {
+                        previousPoint = item.dataIndex;
+
+                        $("#tooltip").remove();
+                        var x = item.datapoint[0].toFixed(2),
+                                y = item.datapoint[1].toFixed(2);
+
+                        showTooltip(item.pageX, item.pageY,
+                                item.series.label + " of " + x + " = " + y);
+                    }
+                }
+                else {
+                    $("#tooltip").remove();
+                    previousPoint = null;
+                }
+            });
+            /*----------- END CHART CODE -------------------------*/
+
+            /*----------- BEGIN TABLESORTER CODE -------------------------*/
+            /* required jquery.tablesorter.min.js*/
+            $(".sortableTable").tablesorter();
+            /*----------- END TABLESORTER CODE -------------------------*/
+
+        }
+
+
+    </script>
+
+}
