@@ -85,3 +85,8 @@
 .notification {
     margin: 5px 0;
 }
+
+/*Datepicker*/
+.date {
+    width:186px;
+}

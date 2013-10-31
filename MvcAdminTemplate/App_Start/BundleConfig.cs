@@ -38,7 +38,8 @@ namespace MvcAdminTemplate
     , "~/Content/Theme/vendors/tinymce/js/tinymce/tinymce.min.js"
     , "~/Content/Theme/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5.js"
     , "~/Content/Theme/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/core-b3.js"
-    , "~/Content/Theme/vendors/jGrowl/jquery.jgrowl.j"
+    , "~/Content/Theme/vendors/jGrowl/jquery.jgrowl.js"
+    , "~/Content/Theme/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"
 
                    ));
 
@@ -62,6 +63,7 @@ namespace MvcAdminTemplate
    , "~/Content/Theme/vendors/easypiechart/jquery.easy-pie-chart_custom.css"
    , "~/Content/Theme/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/stylesheets/bootstrap-wysihtml5/core-b3.css"
    , "~/Content/Theme/vendors/jGrowl/jquery.jgrowl.css"
+   , "~/Content/Theme/vendors/bootstrap-datepicker/css/datepicker.css"
 
    ));
 
