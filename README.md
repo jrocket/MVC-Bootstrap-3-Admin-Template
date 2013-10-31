@@ -12,8 +12,8 @@ Details:
 
 * Login
 * Dashboard
-* ~~Calendar~~ (not implemented yet)
-* ~~Statistics (Charts)~~ (not implemented yet)
+* Calendar 
+* Statistics (Charts) (thanks to https://github.com/onokumus/Bootstrap-Admin-Template)
 * Forms
 * Tables
 * Buttons & Icons
