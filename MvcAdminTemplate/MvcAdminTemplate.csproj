@@ -1398,6 +1398,7 @@
     <Content Include="Content\Theme\vendors\uniform\www\multiple-themes.html" />
     <Content Include="Content\Theme\vendors\uniform\www\stylesheets\multiple-themes.css" />
     <Content Include="Content\Theme\vendors\uniform\www\stylesheets\site.css" />
+    <Content Include="img\jrocket.png" />
     <Content Include="Scripts\js\bootstrap.js" />
     <Content Include="Scripts\js\bootstrap.min.js" />
     <Content Include="Scripts\js\DT_bootstrap.js" />
@@ -1589,6 +1590,8 @@
     <Content Include="Content\Theme\vendors\tablesorter\package.json" />
     <Content Include="Content\Theme\vendors\tablesorter\README.md" />
     <Content Include="Content\Theme\vendors\tablesorter\tablesorter.jquery.json" />
+    <None Include="Properties\PublishProfiles\MvcAdminTemplate - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\MvcAdminTemplate - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />

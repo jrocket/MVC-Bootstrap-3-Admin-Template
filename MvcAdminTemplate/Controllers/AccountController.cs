@@ -84,6 +84,8 @@ namespace MvcAdminTemplate.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            ModelState.AddModelError("","Registration is not available in demo mode");
+            return View(model);
             if (ModelState.IsValid)
             {
                 try
