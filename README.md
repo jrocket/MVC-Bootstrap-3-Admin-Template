@@ -7,6 +7,9 @@ Details:
 * Free for personal and commercial use
 * Inspired by and based on [Meritoo's Bootstrap-Admin-Theme](https://github.com/meritoo/Bootstrap-3-Admin-Theme)
 
+## Demo
+
+[http://mvcadmintemplate.azurewebsites.net/](http://mvcadmintemplate.azurewebsites.net/)
 
 ## Pages
 
