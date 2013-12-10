@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,13 +7,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F8FBE54D-0625-4846-9080-8E7572CFD78A}</ProjectGuid>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{56CB289E-B415-40E0-BAA7-B7C80782E1DE}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvcAdminTemplate</RootNamespace>
     <AssemblyName>MvcAdminTemplate</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -39,51 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0-beta1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0-alpha1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.1.1.0-beta1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.1.1.0-beta1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Facebook">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Forms">
-      <HintPath>..\packages\Microsoft.Owin.Security.Forms.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.1.1.0-beta1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -100,36 +59,58 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0-beta1\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0-beta1\lib\net45\System.Web.Razor.dll</HintPath>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -143,9 +124,8 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ButtonsController.cs" />
     <Compile Include="Controllers\CalendarController.cs" />
@@ -161,17 +141,69 @@
     </Compile>
     <Compile Include="HtmlHelperExtensions\MenuExtensions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\VmDashboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Theme\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Theme\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Theme\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Theme\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Theme\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Theme\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Theme\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Theme\base\jquery-ui.css" />
+    <Content Include="Content\Theme\base\jquery.ui.accordion.css" />
+    <Content Include="Content\Theme\base\jquery.ui.all.css" />
+    <Content Include="Content\Theme\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\Theme\base\jquery.ui.base.css" />
+    <Content Include="Content\Theme\base\jquery.ui.button.css" />
+    <Content Include="Content\Theme\base\jquery.ui.core.css" />
+    <Content Include="Content\Theme\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\Theme\base\jquery.ui.dialog.css" />
+    <Content Include="Content\Theme\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\Theme\base\jquery.ui.resizable.css" />
+    <Content Include="Content\Theme\base\jquery.ui.selectable.css" />
+    <Content Include="Content\Theme\base\jquery.ui.slider.css" />
+    <Content Include="Content\Theme\base\jquery.ui.tabs.css" />
+    <Content Include="Content\Theme\base\jquery.ui.theme.css" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Theme\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Theme\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\Theme\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\Theme\css\bootstrap-admin-theme.css" />
-    <Content Include="Content\Theme\css\bootstrap-theme.css" />
-    <Content Include="Content\Theme\css\bootstrap-theme.min.css" />
-    <Content Include="Content\Theme\css\bootstrap.css" />
-    <Content Include="Content\Theme\css\bootstrap.min.css" />
     <Content Include="Content\Theme\css\datepicker.fixes.css" />
     <Content Include="Content\Theme\css\DT_bootstrap.css" />
     <Content Include="Content\Theme\css\site.css" />
@@ -554,6 +586,7 @@
     <Content Include="Content\Theme\vendors\ckeditor\samples\appendto.html" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\assets\inlineall\logo.png" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Content\Theme\vendors\ckeditor\samples\assets\posteddata.php" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\assets\sample.css" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\assets\sample.jpg" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\assets\uilanguages\languages.js" />
@@ -579,6 +612,7 @@
     <Content Include="Content\Theme\vendors\ckeditor\samples\replacebycode.html" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\sample.css" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\sample.js" />
+    <Content Include="Content\Theme\vendors\ckeditor\samples\sample_posteddata.php" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\tabindex.html" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\uicolor.html" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\uilanguages.html" />
@@ -607,6 +641,7 @@
     <Content Include="Content\Theme\vendors\ckeditor\skins\moono\images\lock.png" />
     <Content Include="Content\Theme\vendors\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\Theme\vendors\ckeditor\styles.js" />
+    <Content Include="Content\Theme\vendors\chosen.jquery.js" />
     <Content Include="Content\Theme\vendors\datatables\css\demo_page.css" />
     <Content Include="Content\Theme\vendors\datatables\css\demo_table.css" />
     <Content Include="Content\Theme\vendors\datatables\css\demo_table_jui.css" />
@@ -659,10 +694,26 @@
     <Content Include="Content\Theme\vendors\datatables\src\model\model.search.js" />
     <Content Include="Content\Theme\vendors\datatables\src\model\model.settings.js" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\controller.js" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\controller.php" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\index.html" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\performance\draw.html" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\performance\large.php" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\performance\page.html" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\performance\sort.html" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\-complex_header.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\2512.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\6776.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\complex_header_2.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\deferred_table.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data_th.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data_two_headers.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dymanic_table.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\empty_table.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\html_table.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\js_data.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\js_data_mixed_types.php" />
+    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\two_tables.php" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\tests\1_dom\_zero_config.js" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\tests_onhold\1_dom\-complex_header.js" />
     <Content Include="Content\Theme\vendors\datatables\unit_testing\tests_onhold\1_dom\-iDraw.js" />
@@ -1398,18 +1449,11 @@
     <Content Include="Content\Theme\vendors\uniform\www\multiple-themes.html" />
     <Content Include="Content\Theme\vendors\uniform\www\stylesheets\multiple-themes.css" />
     <Content Include="Content\Theme\vendors\uniform\www\stylesheets\site.css" />
-    <Content Include="img\jrocket.png" />
-    <Content Include="Scripts\js\bootstrap.js" />
-    <Content Include="Scripts\js\bootstrap.min.js" />
-    <Content Include="Scripts\js\DT_bootstrap.js" />
-    <Content Include="Scripts\js\html5shiv.js" />
-    <Content Include="Scripts\js\respond.min.js" />
-    <Content Include="Scripts\js\twitter-bootstrap-hover-dropdown.js" />
-    <Content Include="Scripts\js\twitter-bootstrap-hover-dropdown.min.js" />
-    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="img\glyphicons-halflings-white.png" />
-    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\Theme\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\Theme\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Theme\fonts\glyphicons-halflings-regular.woff" />
@@ -1489,27 +1533,9 @@
     <Content Include="Content\Theme\vendors\ckeditor\plugins\wsc\LICENSE.md" />
     <Content Include="Content\Theme\vendors\ckeditor\plugins\wsc\README.md" />
     <Content Include="Content\Theme\vendors\ckeditor\README.md" />
-    <Content Include="Content\Theme\vendors\ckeditor\samples\assets\posteddata.php" />
     <Content Include="Content\Theme\vendors\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
-    <Content Include="Content\Theme\vendors\ckeditor\samples\sample_posteddata.php" />
     <Content Include="Content\Theme\vendors\ckeditor\skins\moono\readme.md" />
     <Content Include="Content\Theme\vendors\datatables\images\Sorting icons.psd" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\controller.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\performance\large.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\-complex_header.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\2512.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\6776.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\complex_header_2.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\deferred_table.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data_th.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dom_data_two_headers.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\dymanic_table.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\empty_table.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\html_table.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\js_data.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\js_data_mixed_types.php" />
-    <Content Include="Content\Theme\vendors\datatables\unit_testing\templates\two_tables.php" />
     <Content Include="Content\Theme\vendors\flot\.travis.yml" />
     <Content Include="Content\Theme\vendors\flot\API.md" />
     <Content Include="Content\Theme\vendors\flot\component.json" />
@@ -1551,6 +1577,20 @@
     <Content Include="Content\Theme\vendors\jGrowl\jgrowl.jquery.json" />
     <Content Include="Content\Theme\vendors\jGrowl\LICENSE" />
     <Content Include="Content\Theme\vendors\jGrowl\README.md" />
+    <Content Include="Content\Theme\vendors\sparkline\jquery.sparkline.min.js.gz" />
+    <Content Include="Content\Theme\vendors\tablesorter\component.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-asc.psd" />
+    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-desc.psd" />
+    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-unsorted.psd" />
+    <Content Include="Content\Theme\vendors\tablesorter\css\theme.less" />
+    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\build.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City0.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City1.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City2.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City3.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\package.json" />
+    <Content Include="Content\Theme\vendors\tablesorter\README.md" />
+    <Content Include="Content\Theme\vendors\tablesorter\tablesorter.jquery.json" />
     <Content Include="Content\Theme\vendors\tinymce\js\tinymce\langs\readme.md" />
     <Content Include="Content\Theme\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.eot" />
     <Content Include="Content\Theme\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.ttf" />
@@ -1576,35 +1616,29 @@
     <Content Include="Content\Theme\vendors\uniform\www\CNAME" />
     <Content Include="Content\Theme\vendors\uniform\www\downloads\.keep" />
     <Content Include="Content\Theme\vendors\uniform\www\stylesheets\multiple-themes.scss" />
-    <Content Include="Content\Theme\vendors\sparkline\jquery.sparkline.min.js.gz" />
-    <Content Include="Content\Theme\vendors\tablesorter\component.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-asc.psd" />
-    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-desc.psd" />
-    <Content Include="Content\Theme\vendors\tablesorter\css\psd\green-unsorted.psd" />
-    <Content Include="Content\Theme\vendors\tablesorter\css\theme.less" />
-    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\build.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City0.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City1.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City2.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\docs\assets\City3.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\package.json" />
-    <Content Include="Content\Theme\vendors\tablesorter\README.md" />
-    <Content Include="Content\Theme\vendors\tablesorter\tablesorter.jquery.json" />
-    <None Include="Properties\PublishProfiles\MvcAdminTemplate - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\MvcAdminTemplate - Web Deploy.pubxml" />
-    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\jquery-2.0.3.js" />
-    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\jrocket.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\twitter-bootstrap-hover-dropdown.js" />
+    <Content Include="Scripts\twitter-bootstrap-hover-dropdown.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1617,27 +1651,21 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_Landing.cshtml" />
-    <Content Include="Views\Shared\_LeftMenu.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\Forms\Index.cshtml" />
-    <Content Include="Views\Tables\Index.cshtml" />
     <Content Include="Views\Buttons\Index.cshtml" />
-    <Content Include="Views\Editors\Index.cshtml" />
-    <Content Include="Views\Interface\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Editors\Index.cshtml" />
+    <Content Include="Views\Forms\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Interface\Index.cshtml" />
+    <Content Include="Views\Shared\_Landing.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\_LeftMenu.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Statistics\Index.cshtml" />
+    <Content Include="Views\Tables\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1661,9 +1689,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>14511</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:14511/</IISUrl>
+          <IISUrl>http://localhost:1079/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
